@@ -1,0 +1,29 @@
+Queue contents: 
+Adding 'hi' with priority 1
+Queue contents: <"hi":1>
+Adding 'tom' with priority 8
+Queue contents: <"hi":1,"tom":8>
+Adding 'hi' with priority 1
+Queue contents: <"hi":1,"hi":1,"tom":8>
+Adding 'cool' with priority 1
+Queue contents: <"cool":1,"hi":1,"hi":1,"tom":8>
+Calling front, output should be 'tom': tom
+Calling frontPri, output should be '8': 8
+Calling deleteFront, output should remove 'tom':8 : 
+Queue contents: <"cool":1,"hi":1,"hi":1>
+Calling deleteFront, output should remove 'hi':1 : 
+Queue contents: <"cool":1,"hi":1>
+Calling deleteFront, output should remove 'hi':1 : 
+Queue contents: <"cool":1>
+Calling deleteFront, output should remove 'cool':1 : 
+Queue contents: 
+
+Testing exceptions
+Calling front on an empty priority queue
+ex1.pQueueException: The queue is empty
+Calling frontPri on an empty priority queue
+ex1.pQueueException: The queue is empty
+Calling deleteFront on an empty priority queue
+ex1.pQueueException: The queue is empty
+Adding an item with priority outside of range 1 - 20
+ex1.pQueueException: The priority is outside the range 1 - 20
